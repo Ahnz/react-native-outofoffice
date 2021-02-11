@@ -1,17 +1,8 @@
 import React from 'react';
 import { Text, View, Image, TextInput } from 'react-native';
-import * as AuthSession from 'expo-auth-session';
-import { openAuthSession } from 'azure-ad-graph-expo';
+import getEnvVars from '../../enviroment';
 
-const azureAdAppProps = {
-  clientId: 'XXX',
-  tenantId: 'XXX',
-  scope: 'user.read',
-  redirectUrl: AuthSession.makeRedirectUri(),
-  clientSecret: 'XXX',
-  domainHint: 'XXX',
-  prompt: 'login',
-};
+const {azureAdAppProps} = getEnvVars();
 
 console.log(azureAdAppProps);
 export default class Login extends React.Component {
