@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, Image, TextInput } from 'react-native';
+import { openAuthSession } from 'azure-ad-graph-expo';
 import getEnvVars from '../../enviroment';
 
 const {azureAdAppProps} = getEnvVars();
